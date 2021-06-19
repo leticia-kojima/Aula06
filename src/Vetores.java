@@ -4,9 +4,36 @@ public class Vetores {
 
 	public static void main(String[] args) {
 		
-		double aluno1, aluno2, aluno3, aluno4, aluno5, aluno6, aluno7, aluno8, aluno9, aluno10, total;
+		//double aluno1, aluno2, aluno3, aluno4, aluno5, aluno6, aluno7, aluno8, aluno9, aluno10, total;
 		Scanner leitor = new Scanner(System.in);
 		
+		int quantidadeAlunos = 0;
+		double totalConsumo = 0;
+		
+		System.out.println("Digite a quantidade de alunos na turma:");
+		quantidadeAlunos = leitor.nextInt();
+		
+		double valores[] = new double[quantidadeAlunos];
+		int numeroAluno = 0;
+		
+		for (int i = 0; i < quantidadeAlunos; i++) {
+			numeroAluno = i + 1;
+			System.out.println("Por favor, digite o consumo do "+ numeroAluno + " aluno");
+			valores[i] = leitor.nextInt();
+			totalConsumo = totalConsumo + valores[i];
+			
+		}
+		
+		System.out.println("Total: " + totalConsumo);
+		
+		//System.out.println(valores.length);
+		
+		for (int i = 0; i < valores.length; i ++) {
+			System.out.println("O consumo do aluno " + numeroAluno + " foi de R$" + valores[i]);
+		}
+		
+	
+		/*
 		System.out.println("Por favor, digite o consumo do 1º aluno");
 		aluno1 = leitor.nextDouble();
 		System.out.println("Por favor, digite o consumo do 2º aluno");
@@ -42,7 +69,7 @@ public class Vetores {
 		System.out.println("O aluno 10 consumiu R$" + aluno10);
 
 		System.out.println("O total de consumo foi de R$" + total);
-		
+		*/
 		leitor.close();
 		
 
